@@ -1,4 +1,4 @@
-package com.example.lowdemand_xml
+package com.example.highDemand_xml
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -15,13 +15,15 @@ import android.widget.ScrollView
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.marginStart
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var dropdownButton: Button
     private lateinit var spinner: Spinner
+    private lateinit var postRecyclerView: RecyclerView
 
     @SuppressLint("InflateParams")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         dropdownButton = findViewById(R.id.dropdown_button)
         spinner = findViewById(R.id.spinner)
+        postRecyclerView = findViewById(R.id.postRecyclerView)
 
         // Set an OnClickListener on the Button
         dropdownButton.setOnClickListener {
@@ -124,6 +127,14 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+        val post1Images = MutableList(9) { R.drawable.photo3 }
+
+        postRecyclerView.layoutManager = GridLayoutManager(this, 3)
+        postRecyclerView.addItemDecoration(GridSpacingItemDecoration(3, 16, true))
+
+        // Set adapter with data for the RecyclerView using ImageAdapter
+        postRecyclerView.adapter = ImageAdapter(this, post1Images, 300, 300)
 
         spinner.adapter = adapter
     }

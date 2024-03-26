@@ -1,4 +1,4 @@
-package com.example.lowdemand_xml
+package com.example.highDemand_xml
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

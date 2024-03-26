@@ -1,4 +1,4 @@
-package com.example.lowdemand_xml
+package com.example.highDemand_xml
 
 import org.junit.Test
 

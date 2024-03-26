@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">MediumDemand_XML</string>
-    <string name="app_title">Medium Demand</string>
+    <string name="app_name">HighDemand_XML</string>
+    <string name="app_title">High Demand</string>
     <string name="burger_button">Button</string>
     <string name="first_post_title">My Bedroom</string>
     <string name="first_post_posted">Posted 27/1-24 10:04</string>

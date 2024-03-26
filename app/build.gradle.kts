@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lowdemand_xml"
+    namespace = "com.example.highDemand_xml"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.lowdemand_xml"
+        applicationId = "com.example.highDemand_xml"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -24,6 +24,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        create("benchmark") {
+            initWith(buildTypes.getByName("release"))
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("release")
+            isDebuggable = false
         }
     }
     compileOptions {

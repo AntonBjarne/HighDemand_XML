@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LowDemand_XML"
+rootProject.name = "HighDemand_XML"
 include(":app")
- 
+include(":app:benchmark")
