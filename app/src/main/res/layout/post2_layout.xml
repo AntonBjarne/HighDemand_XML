@@ -17,13 +17,42 @@
         tools:src="@drawable/photo4"
         tools:ignore="ContentDescription,MissingConstraints" />
 
+    <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/heart_121"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/shareIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/share"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toEndOf="@id/heartIcon"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/commentIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/vector"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toEndOf="@id/shareIcon"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/second_post_title"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/heartIcon" />
 
     <TextView
         android:id="@+id/postedTextView"
