@@ -6,20 +6,10 @@
         <State />
       </entry>
       <entry key="scrollPostTest()">
-        <State>
-          <targetSelectedWithDropDown>
-            <Target>
-              <type value="QUICK_BOOT_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\leowa\.android\avd\Pixel_6a_API_27.avd" />
-                </Key>
-              </deviceKey>
-            </Target>
-          </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-04-06T13:37:56.074738100Z" />
-        </State>
+        <State />
+      </entry>
+      <entry key="scrollRowTest()">
+        <State />
       </entry>
       <entry key="startup()">
         <State />

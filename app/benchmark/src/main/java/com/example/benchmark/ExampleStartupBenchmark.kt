@@ -44,7 +44,7 @@ class ExampleStartupBenchmark {
     fun scrollPostTest() = benchmarkRule.measureRepeated(
         packageName = "com.example.highDemand_xml",
         metrics = listOf(FrameTimingMetric()),
-        iterations = 10,
+        iterations = 30,
         startupMode = StartupMode.COLD
     ) {
         pressHome()
@@ -68,7 +68,7 @@ class ExampleStartupBenchmark {
     fun scrollRowTest() = benchmarkRule.measureRepeated(
         packageName = "com.example.highDemand_xml",
         metrics = listOf(FrameTimingMetric()),
-        iterations = 10,
+        iterations = 30,
         startupMode = StartupMode.COLD
     ){
         pressHome()
@@ -109,5 +109,18 @@ class ExampleStartupBenchmark {
         openNav.click()
 
         device.waitForIdle()
+    }
+
+    @Test
+    fun allTest() = benchmarkRule.measureRepeated(
+        packageName = "com.example.highDemand_xml",
+        metrics = listOf(FrameTimingMetric()),
+        iterations = 1,
+        startupMode = StartupMode.COLD
+    ){
+        pressHome()
+        startActivityAndWait()
+        scrollPostList()
+        scrollRowList()
     }
 }
