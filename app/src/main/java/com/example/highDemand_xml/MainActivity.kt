@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         val scrollView = findViewById<ScrollView>(R.id.scrollView)
         val linearLayout2 = findViewById<LinearLayout>(R.id.linearLayout2)
 
-        val numberOfPosts = 5 // Change this to the desired number of items
+        val numberOfPosts = 10 // Change this to the desired number of items
 
         for (i in 0 until numberOfPosts) {
             // Inflate the card layout
